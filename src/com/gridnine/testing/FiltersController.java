@@ -28,7 +28,7 @@ public class FiltersController {
     }
 
     public static void transferOverTwoHour(final List<Flight> list) {
-        List<Flight> sortedList = new ArrayList<>();
+        List<Flight> sortedList = new LinkedList<>();
 
         for (Flight dateTime : list) {
             Duration segmentsCalculate = dateTime.getSegments().stream()
