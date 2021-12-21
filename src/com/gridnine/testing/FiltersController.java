@@ -39,8 +39,9 @@ public class FiltersController {
                     dateTime.getSegments().get(dateTime.getSegments().size() - 1).getArrivalDate());
 
             if (flightCalculate.minus(segmentsCalculate).compareTo(Duration.ofHours(2)) > 0) {
+                sortedList.add(dateTime);
             }
-            sortedList.add(dateTime);
+
         }
         System.out.println();
         System.out.print(" Total time spent on earth that exceeds two hours : " + "\n" + sortedList);
